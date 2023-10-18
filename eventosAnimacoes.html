@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <div id="button">
+  <button class="fadeIn">Fade in</button>
+  <button class="fadeOut">fade out</button>
+  <button class="fadeToggle">fade toggle</button>
+  <button class="fadeTo">fade to</button>
+  <button class="slideDown">slideDown</button>
+  <button class="slideUp">slideUp</button>
+  <button class="animate">animate</button>
+  <button class="stop">stop</button>
+</div>
+<div>
+  <div style="width: 250px; height: 50px; background-color: blue; position: absolute;"></div>
+
+  <div id="square" style="width: 230px; height: 65px; background-color: red; position: absolute;"></div>
+</div>
+  <h1 class="titulo" style="padding-top: 50px;">Este título</h1>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+  <script>
+
+    $(".fadeOut").click(()=>{
+      $("#square").fadeOut(1000);
+    })
+
+    $(".fadeIn").click(()=>{
+      $("#square").fadeIn(1000);
+    })
+
+    $(".fadeToggle").click(()=>{
+      $("#square").fadeToggle(1000);
+    })
+
+    $(".fadeTo").click(()=>{
+      $("#square").fadeTo(1000, 0.5);
+    })
+    
+    $(".slideDown").click(()=>{
+      $("#square").slideDown();
+    })
+
+    $(".slideUp").click(()=>{
+      $("#square").slideUp();
+    })
+    
+    $(".animate").click(()=>{
+      $("#square").animate({width: 50}, 5000);
+    })
+
+    $(".stop").click(()=>{
+      $("#square").stop();
+    })
+
+    $(".titulo").mouseleave(()=>{
+      console.log("mouse leave");
+    })
+
+    $(".titulo").mouseenter(()=>{
+      console.log("mouse enter")
+    })
+
+    $(".titulo").click(()=>{
+      console.log("clicado")
+    })
+
+    $(".titulo").dblclick(()=>{
+      console.log("clicado2x")
+    })
+  </script>
+</body>
+</html>
